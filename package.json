@@ -1,0 +1,23 @@
+{
+  "name": "dc",
+  "version": "0.0.1",
+  "main": "src/app.js",
+  "author": "Dave O",
+  "dependencies": {
+    "react": "^0.13.0-beta.1",
+    "react-art": "^0.13.0-beta.1",
+    "lodash": "^3.0.1",
+    "voronoi": "git://github.com/gorhill/Javascript-Voronoi",
+    "art": "^0.10.0"
+  },
+  "devDependencies": {
+    "6to5": "^2.6.3",
+    "6to5-loader": "^1.0.0",
+    "css-loader": "~0.9.0",
+    "jsx-loader": "^0.12.2",
+    "webpack": "~1.4.11"
+  },
+  "scripts": {
+    "start": "webpack --watch --colors --progress"
+  }
+}
