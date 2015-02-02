@@ -1,9 +1,10 @@
 var Voronoi = require('voronoi'),
-    _ = window._ = require('lodash');
-
-var config = require('./config');
+    _ = window._ = require('lodash'),
+    perlin = require('../vendor/perlin'),
+    config = require('./config');
 
 var voronoi = new Voronoi();
+
 var bbox = {
   xl: 0,
   xr: config.WORLD_WIDTH,
@@ -11,7 +12,7 @@ var bbox = {
   yb: config.WORLD_HEIGHT,
 };
 
-var sites = _.range(0, 1000).map(function () {
+var sites = _.range(0, config.MAX_NODES).map(function () {
   return {
     x: _.random(config.WORLD_WIDTH),
     y: _.random(config.WORLD_HEIGHT)
@@ -31,6 +32,12 @@ diagram.cells.forEach(function (cell) {
            he.edge.vb.y === config.WORLD_HEIGHT ||
            he.edge.vb.y === 0;
   }).length !== 0;
+});
+
+perlin.seed(Math.random());
+
+diagram.cells.forEach(function (cell) {
+  cell.ocean = perlin.simplex2(cell.site.x / 100, cell.site.y / 100) < 0.50;
 });
 
 module.exports = diagram;

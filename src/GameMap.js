@@ -9,6 +9,17 @@ var Shape = ReactART.Shape;
 var Surface = ReactART.Surface;
 var Transform = ReactART.Transform;
 
+var colors = {
+  'yellow'      : '#FDEE5F',
+  'orange'      : '#CFB82E',
+  'brown-green' : '#A1A536',
+  'green'       : '#6E943F',
+  'dark-green'  : '#19823F',
+  'light-blue'  : '#05C5C8',
+  'blue'        : '#00A6DA',
+  'dark-blue'   : '#1F89B0'
+};
+
 var MapNode = React.createClass({
   getInitialState: function () {
     return { fillColor: "#AAAAAA" };
@@ -31,7 +42,7 @@ var MapNode = React.createClass({
   },
 
   getStroke: function () {
-    return (this.props.cell.ocean) ? "blue" : "green";
+    return (this.props.cell.ocean) ? 'blue' : 'green';
   },
 
   getPath: function () {
@@ -53,7 +64,7 @@ var MapNode = React.createClass({
         onMouseOut={this.handleMouseOut}
       >
         <Shape
-          stroke="#CCCCCC"
+          stroke={colors['green']}
           strokeWidth={1}
           fill={this.getStroke()}
           d={this.getPath()}
