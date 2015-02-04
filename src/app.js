@@ -1,8 +1,10 @@
 'use strict';
 
-var React = require('react/addons');
-var GameMap = require('./GameMap');
-var map = require('./map');
+var React = require('react/addons'),
+    _ = require('lodash');
+
+var GameMap = require('./GameMap'),
+    map = require('./map');
 
 React.render(
   <GameMap map={map} />,
