@@ -30,10 +30,18 @@ var MapNode = React.createClass({
   },
 
   getFill: function () {
+    if (this.props.cell.elevation === 100) {
+      return "#CCCCCC";
+    }
+
     return (this.props.cell.ocean) ? '#0000FF' : '#00AA00';
   },
 
   getStroke: function () {
+    if (this.props.cell.elevation === 100) {
+      return "#AAAAAA";
+    }
+
     return (this.props.cell.ocean) ? '#0000CC' : '#009900';
   },
 
