@@ -19,7 +19,6 @@ var MapNode = React.createClass({
       x: e.x,
       y: e.y
     });
-    console.log(this.props.cell);
   },
 
   handleMouseOver: function () {
@@ -30,8 +29,12 @@ var MapNode = React.createClass({
     this.setState({fillColor: "#AAAAAA"});
   },
 
+  getFill: function () {
+    return (this.props.cell.ocean) ? '#0000FF' : '#00AA00';
+  },
+
   getStroke: function () {
-    return (this.props.cell.ocean) ? 'blue' : 'green';
+    return (this.props.cell.ocean) ? '#0000CC' : '#009900';
   },
 
   getPath: function () {
@@ -53,9 +56,9 @@ var MapNode = React.createClass({
         onMouseOut={this.handleMouseOut}
       >
         <Shape
-          stroke="#CCCCCC"
+          stroke={this.getStroke()}
           strokeWidth={1}
-          fill={this.getStroke()}
+          fill={this.getFill()}
           d={this.getPath()}
         />
       </Group>
