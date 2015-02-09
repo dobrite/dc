@@ -11,7 +11,9 @@ var Transform = ReactART.Transform;
 
 var MapNode = React.createClass({
   getInitialState: function () {
-    return { fillColor: "#AAAAAA" };
+    return {
+      fillColor: this.getFill()
+    };
   },
 
   handleClick: function (e) {
@@ -22,11 +24,15 @@ var MapNode = React.createClass({
   },
 
   handleMouseOver: function () {
-    this.setState({fillColor: "#FFFFFF"});
+    this.setState({
+      fillColor: "#FFFFFF"
+    });
   },
 
   handleMouseOut: function () {
-    this.setState({fillColor: "#AAAAAA"});
+    this.setState({
+      fillColor: this.getFill()
+    });
   },
 
   getFill: function () {
@@ -66,7 +72,7 @@ var MapNode = React.createClass({
         <Shape
           stroke={this.getStroke()}
           strokeWidth={1}
-          fill={this.getFill()}
+          fill={this.state.fillColor}
           d={this.getPath()}
         />
       </Group>

@@ -44,7 +44,7 @@ diagram.cells.forEach((cell) => {
 });
 
 var peakPercent = _.random(1, 100);
-var numPeaks = _.find(config.PEAK_DISTRIBUTION, (k, v) => peakPercent < parseInt(v, 10));
+var numPeaks = _.find(config.PEAK_DISTRIBUTION, (k, v) => peakPercent <= parseInt(v, 10));
 
 _.range(0, numPeaks).map(() => {
   diagram.cells[_.random(0, diagram.cells.length - 1)].elevation = 100;
