@@ -22,9 +22,13 @@ var sites = _.range(0, config.MAX_NODES).map(() => {
 var diagram = window.diagram = voronoi.compute(sites, bbox);
 
 diagram.cells.forEach((cell) => {
-  cell.ocean = cell.mapEdge = cell.halfedges.filter((he) => {
-    return he.edge.rSite === null;
-  }).length > 0;
+  var neighbors = cell.halfedges.filter((he) => {
+    return he.edge.rSite !== null;
+  });
+  cell.ocean = cell.mapEdge = neighbors.length !== cell.halfedges.length;
+  cell.touches = neighbors.map((cell) => {
+    return cell.edge.rSite.voronoiId;
+  });
 });
 
 perlin.seed(Math.random());
