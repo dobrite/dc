@@ -19,21 +19,12 @@ var sites = _.range(0, config.MAX_NODES).map(() => {
   };
 });
 
-var isEdge = function (he) {
-  return he.edge.va.x === config.WORLD_WIDTH ||
-    he.edge.va.x === 0 ||
-    he.edge.va.y === config.WORLD_HEIGHT ||
-    he.edge.va.y === 0 ||
-    he.edge.vb.x === config.WORLD_WIDTH ||
-    he.edge.vb.x === 0 ||
-    he.edge.vb.y === config.WORLD_HEIGHT ||
-    he.edge.vb.y === 0;
-};
-
 var diagram = window.diagram = voronoi.compute(sites, bbox);
 
 diagram.cells.forEach((cell) => {
-  cell.ocean = cell.mapEdge = cell.halfedges.filter(isEdge).length !== 0;
+  cell.ocean = cell.mapEdge = cell.halfedges.filter((he) => {
+    return he.edge.rSite === null;
+  }).length > 0;
 });
 
 perlin.seed(Math.random());
