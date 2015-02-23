@@ -3,38 +3,6 @@ var Voronoi = require('voronoi'),
     perlin = require('../vendor/perlin'),
     config = require('./config');
 
-// Vertex
-    // x
-    // y
-// Edge
-  // lSite
-  // rSite
-  // va
-    // x
-    // y
-  // vb
-    // x
-    // y
-// Cell
-  // site
-  // halfedges
-// Halfedge
-  // site
-  // edge
-  // getStartpoint()
-  // getEndpoint()
-
-// Center.neighbors
-// Center.borders
-// Center.corners
-// Edge.d0 center to center
-// Edge.d1
-// Edge.v0 corner to corner
-// Edge.v1
-// Corner.touches
-// Corner.protrudes
-// Corner.adjacent
-
 var voronoi = new Voronoi();
 
 var bbox = {
@@ -77,11 +45,14 @@ diagram.centers.forEach((center) => {
 diagram.corners = _.uniq(_.flatten(diagram.centers.map((center) => {
   return center.corners;
 })));
+
 diagram.corners.forEach((corner) => {
   corner.touches = diagram.centers.filter((center) => {
     return _.indexOf(center.corners, corner) >= 0;
   });
 });
+
+// MapGen
 
 perlin.seed(Math.random());
 
