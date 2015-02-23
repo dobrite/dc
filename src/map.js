@@ -3,6 +3,38 @@ var Voronoi = require('voronoi'),
     perlin = require('../vendor/perlin'),
     config = require('./config');
 
+// Vertex
+    // x
+    // y
+// Edge
+  // lSite
+  // rSite
+  // va
+    // x
+    // y
+  // vb
+    // x
+    // y
+// Cell
+  // site
+  // halfedges
+// Halfedge
+  // site
+  // edge
+  // getStartpoint()
+  // getEndpoint()
+
+// Center.neighbors
+// Center.borders
+// Center.corners
+// Edge.d0 center to center
+// Edge.d1
+// Edge.v0 corner to corner
+// Edge.v1
+// Corner.touches
+// Corner.protrudes
+// Corner.adjacent
+
 var voronoi = new Voronoi();
 
 var bbox = {
@@ -21,21 +53,41 @@ var sites = _.range(0, config.MAX_NODES).map(() => {
 
 var diagram = window.diagram = voronoi.compute(sites, bbox);
 
-diagram.cells.forEach((cell) => {
-  var neighbors = cell.halfedges.filter((he) => {
+// Centers
+
+diagram.centers = diagram.cells;
+diagram.centers.forEach((center) => {
+  var neighbors = center.halfedges.filter((he) => {
     return he.edge.rSite !== null;
   });
-  cell.ocean = cell.mapEdge = neighbors.length !== cell.halfedges.length;
-  cell.touches = neighbors.map((cell) => {
-    return cell.edge.rSite.voronoiId;
+  center.borders = center.halfedges;
+  var corners = center.halfedges.map((he) => {
+    return [he.getStartpoint(), he.getEndpoint()];
+  });
+  center.corners = _.uniq(_.flatten(corners));
+  // one or more null
+  center.ocean = center.mapEdge = neighbors.length !== center.halfedges.length;
+  center.neighbors = neighbors.map((center) => {
+    return diagram.centers[center.edge.rSite.voronoiId];
+  });
+});
+
+// Corners
+
+diagram.corners = _.uniq(_.flatten(diagram.centers.map((center) => {
+  return center.corners;
+})));
+diagram.corners.forEach((corner) => {
+  corner.touches = diagram.centers.filter((center) => {
+    return _.indexOf(center.corners, corner) >= 0;
   });
 });
 
 perlin.seed(Math.random());
 
-diagram.cells.forEach((cell) => {
+diagram.centers.forEach((center) => {
   // larger the divisor the more zoomed out it is (lots of small lakes)
-  cell.ocean = cell.ocean || perlin.simplex2(cell.site.x / 175, cell.site.y / 175) > 0.50;
+  center.ocean = center.ocean || perlin.simplex2(center.site.x / 175, center.site.y / 175) > 0.50;
 });
 
 var peakPercent = _.random(1, 100);
