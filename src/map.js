@@ -25,31 +25,31 @@ var diagram = window.diagram = voronoi.compute(sites, bbox);
 
 diagram.centers = diagram.cells;
 diagram.centers.forEach((center) => {
-  var neighbors = center.halfedges.filter((he) => {
-    return he.edge.rSite !== null;
-  });
+  var neighbors = center.halfedges.filter((he) =>
+    he.edge.rSite !== null
+  );
   center.borders = center.halfedges;
-  var corners = center.halfedges.map((he) => {
-    return [he.getStartpoint(), he.getEndpoint()];
-  });
+  var corners = center.halfedges.map((he) =>
+    [he.getStartpoint(), he.getEndpoint()]
+  );
   center.corners = _.uniq(_.flatten(corners));
   // one or more null
   center.ocean = center.mapEdge = neighbors.length !== center.halfedges.length;
-  center.neighbors = neighbors.map((center) => {
-    return diagram.centers[center.edge.rSite.voronoiId];
-  });
+  center.neighbors = neighbors.map((center) =>
+    diagram.centers[center.edge.rSite.voronoiId]
+  );
 });
 
 // Corners
 
-diagram.corners = _.uniq(_.flatten(diagram.centers.map((center) => {
-  return center.corners;
-})));
+diagram.corners = _.uniq(_.flatten(diagram.centers.map((center) =>
+  center.corners
+)));
 
 diagram.corners.forEach((corner) => {
-  corner.touches = diagram.centers.filter((center) => {
-    return _.indexOf(center.corners, corner) >= 0;
-  });
+  corner.touches = diagram.centers.filter((center) =>
+    _.indexOf(center.corners, corner) >= 0
+  );
 });
 
 // MapGen
