@@ -1,6 +1,7 @@
 var React = require('react/addons');
 var ReactART = require('react-art');
 var _ = require('lodash');
+var cL = require('./utils').colorLuminance;
 
 var config = require('./config');
 
@@ -40,7 +41,9 @@ var MapNode = React.createClass({
       return "#CCCCCC";
     }
 
-    return (this.props.cell.ocean) ? '#0000FF' : '#00AA00';
+    var color = (this.props.cell.ocean) ?  '#0000FF' : '#00AA00';
+    var r = _.random(0.0, 0.05, true) - 0.025;
+    return cL(color, r);
   },
 
   getStroke: function () {
