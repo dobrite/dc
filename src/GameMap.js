@@ -1,14 +1,12 @@
-var React = require('react/addons');
-var ReactART = require('react-art');
-var _ = require('lodash');
-var cL = require('./utils').colorLuminance;
-
-var config = require('./config');
-
-var Group = ReactART.Group;
-var Shape = ReactART.Shape;
-var Surface = ReactART.Surface;
-var Transform = ReactART.Transform;
+var React = require('react/addons'),
+    ReactART = require('react-art'),
+    _ = require('lodash'),
+    cL = require('./utils').colorLuminance,
+    config = require('./config'),
+    Group = ReactART.Group,
+    Shape = ReactART.Shape,
+    Surface = ReactART.Surface,
+    Transform = ReactART.Transform;
 
 var MapNode = React.createClass({
   getInitialState: function () {
