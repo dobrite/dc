@@ -51,10 +51,6 @@ diagram.corners.forEach((corner) => {
   corner.touches = diagram.centers.filter((center) =>
     _.indexOf(center.corners, corner) >= 0
   );
-  if (corner.touches.length >= 5) {
-    //debugger
-  }
-
   // protrudes
   // adjacent
 });
