@@ -3,10 +3,7 @@ var React = require('react/addons'),
     _ = require('lodash'),
     cL = require('./utils').colorLuminance,
     config = require('./config'),
-    Group = ReactART.Group,
-    Shape = ReactART.Shape,
-    Surface = ReactART.Surface,
-    Transform = ReactART.Transform;
+    { Group, Shape, Surface, Transform } = ReactART.Group;
 
 var MapNode = React.createClass({
   getInitialState: function () {
