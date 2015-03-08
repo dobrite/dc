@@ -25,6 +25,8 @@ var diagram = window.diagram = voronoi.compute(sites, bbox);
 // Centers
 
 diagram.centers = diagram.cells;
+delete diagram.cells;
+
 diagram.centers.forEach((center) => {
   var neighbors = center.halfedges.filter((he) =>
     he.edge.rSite !== null
