@@ -1,0 +1,297 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.1.6
+3 info using node@v0.10.33
+4 verbose node symlink /usr/local/bin/node
+5 warn package.json dc@0.0.1 No repository field.
+6 verbose install where, deps [ '/Users/dave/projects/browser/dc',
+6 verbose install   [ 'react',
+6 verbose install     'react-art',
+6 verbose install     'lodash',
+6 verbose install     'voronoi',
+6 verbose install     'art',
+6 verbose install     '6to5',
+6 verbose install     '6to5-loader',
+6 verbose install     'css-loader',
+6 verbose install     'jsx-loader',
+6 verbose install     'webpack' ] ]
+7 verbose install where, peers [ '/Users/dave/projects/browser/dc', [] ]
+8 info preinstall dc@0.0.1
+9 verbose already installed skipping art@^0.10.0 /Users/dave/projects/browser/dc
+10 verbose already installed skipping 6to5@^2.6.3 /Users/dave/projects/browser/dc
+11 verbose already installed skipping 6to5-loader@^1.0.0 /Users/dave/projects/browser/dc
+12 verbose already installed skipping css-loader@~0.9.0 /Users/dave/projects/browser/dc
+13 verbose already installed skipping jsx-loader@^0.12.2 /Users/dave/projects/browser/dc
+14 verbose already installed skipping webpack@~1.4.11 /Users/dave/projects/browser/dc
+15 silly cache add args [ 'react@^0.13.0-rc2', null ]
+16 verbose cache add spec react@^0.13.0-rc2
+17 silly cache add args [ 'react-art@^0.13.0-rc2', null ]
+18 verbose cache add spec react-art@^0.13.0-rc2
+19 silly cache add parsed spec { raw: 'react@^0.13.0-rc2',
+19 silly cache add   scope: null,
+19 silly cache add   name: 'react',
+19 silly cache add   rawSpec: '^0.13.0-rc2',
+19 silly cache add   spec: '>=0.13.0-rc2 <0.14.0',
+19 silly cache add   type: 'range' }
+20 verbose addNamed react@>=0.13.0-rc2 <0.14.0
+21 silly addNamed semver.valid null
+22 silly addNamed semver.validRange >=0.13.0-rc2 <0.14.0
+23 silly addNameRange { name: 'react', range: '>=0.13.0-rc2 <0.14.0', hasData: false }
+24 verbose mapToRegistry name react
+25 verbose mapToRegistry uri https://registry.npmjs.org/react
+26 verbose addNameRange registry:https://registry.npmjs.org/react not in flight; fetching
+27 verbose already installed skipping lodash@^3.0.1 /Users/dave/projects/browser/dc
+28 silly cache add args [ 'voronoi@git://github.com/gorhill/Javascript-Voronoi', null ]
+29 verbose cache add spec voronoi@git://github.com/gorhill/Javascript-Voronoi
+30 silly cache add parsed spec { raw: 'react-art@^0.13.0-rc2',
+30 silly cache add   scope: null,
+30 silly cache add   name: 'react-art',
+30 silly cache add   rawSpec: '^0.13.0-rc2',
+30 silly cache add   spec: '>=0.13.0-rc2 <0.14.0',
+30 silly cache add   type: 'range' }
+31 verbose addNamed react-art@>=0.13.0-rc2 <0.14.0
+32 silly addNamed semver.valid null
+33 silly addNamed semver.validRange >=0.13.0-rc2 <0.14.0
+34 silly addNameRange { name: 'react-art',
+34 silly addNameRange   range: '>=0.13.0-rc2 <0.14.0',
+34 silly addNameRange   hasData: false }
+35 verbose mapToRegistry name react-art
+36 verbose mapToRegistry uri https://registry.npmjs.org/react-art
+37 verbose addNameRange registry:https://registry.npmjs.org/react-art not in flight; fetching
+38 silly cache add parsed spec { raw: 'voronoi@git://github.com/gorhill/Javascript-Voronoi',
+38 silly cache add   scope: null,
+38 silly cache add   name: 'voronoi',
+38 silly cache add   rawSpec: 'git://github.com/gorhill/Javascript-Voronoi',
+38 silly cache add   spec: 'git://github.com/gorhill/Javascript-Voronoi',
+38 silly cache add   type: 'git' }
+39 verbose addRemoteGit u="git://github.com/gorhill/Javascript-Voronoi" silent=false
+40 silly addRemoteGit parsed { protocol: 'git:',
+40 silly addRemoteGit   slashes: true,
+40 silly addRemoteGit   auth: null,
+40 silly addRemoteGit   host: 'github.com',
+40 silly addRemoteGit   port: null,
+40 silly addRemoteGit   hostname: 'github.com',
+40 silly addRemoteGit   hash: null,
+40 silly addRemoteGit   search: '',
+40 silly addRemoteGit   query: {},
+40 silly addRemoteGit   pathname: '/gorhill/Javascript-Voronoi',
+40 silly addRemoteGit   path: '/gorhill/Javascript-Voronoi',
+40 silly addRemoteGit   href: 'git://github.com/gorhill/Javascript-Voronoi' }
+41 verbose addRemoteGit git://github.com/gorhill/Javascript-Voronoi not in flight; cloning
+42 verbose addRemoteGit [ 'git://github.com/gorhill/Javascript-Voronoi', 'master' ]
+43 info git [ 'config', '--get', 'remote.origin.url' ]
+44 verbose request on initialization, where is /react-art
+45 verbose request after pass 1, where is /react-art
+46 verbose request url raw /react-art
+47 verbose request resolving registry [ 'https://registry.npmjs.org/', './react-art' ]
+48 verbose request after pass 2, where is https://registry.npmjs.org/react-art
+49 verbose request no auth needed
+50 info attempt registry request try #1 at 06:21:34
+51 verbose request id d512c8c341def5b8
+52 verbose etag "4IEEZGNV1QLWRBCO177U4K44E"
+53 http request GET https://registry.npmjs.org/react-art
+54 verbose request on initialization, where is /react
+55 verbose request after pass 1, where is /react
+56 verbose request url raw /react
+57 verbose request resolving registry [ 'https://registry.npmjs.org/', './react' ]
+58 verbose request after pass 2, where is https://registry.npmjs.org/react
+59 verbose request no auth needed
+60 info attempt registry request try #1 at 06:21:34
+61 verbose etag "76BSWQF6BODYEU8OSD9OVPOA9"
+62 http request GET https://registry.npmjs.org/react
+63 verbose git remote.origin.url git://github.com/gorhill/Javascript-Voronoi
+64 info git [ 'fetch', '-a', 'origin' ]
+65 verbose git fetch -a origin (git://github.com/gorhill/Javascript-Voronoi) From git://github.com/gorhill/Javascript-Voronoi
+65 verbose git fetch -a origin (git://github.com/gorhill/Javascript-Voronoi)    bb8fd98..37dddc0  master     -> master
+65 verbose git fetch -a origin (git://github.com/gorhill/Javascript-Voronoi)  * [new ref]         refs/pull/22/head -> refs/pull/22/head
+66 info git [ 'rev-list', '-n1', 'master' ]
+67 verbose git rev-list -n1 master 37dddc017b61724689cc074c6466129fc1893714
+68 verbose resolved git url git://github.com/gorhill/Javascript-Voronoi#37dddc017b61724689cc074c6466129fc1893714
+69 info git [ 'archive', 'master', '--format=tar', '--prefix=package/' ]
+70 silly addLocalTarball shasum (computed) de7ea28540ce8b1f23affdc7e7c2bff9f93c93a9
+71 verbose addTmpTarball /var/folders/z2/wyj97zb15n1dtsymsjwgpnym0000gn/T/npm-98329-1c5e3b51/1425907296016-0.16199503745883703/tmp.tgz not in flight; adding
+72 verbose addTmpTarball validating metadata from /var/folders/z2/wyj97zb15n1dtsymsjwgpnym0000gn/T/npm-98329-1c5e3b51/1425907296016-0.16199503745883703/tmp.tgz
+73 verbose tar unpack /var/folders/z2/wyj97zb15n1dtsymsjwgpnym0000gn/T/npm-98329-1c5e3b51/1425907296016-0.16199503745883703/tmp.tgz
+74 verbose tar unpacking to /var/folders/z2/wyj97zb15n1dtsymsjwgpnym0000gn/T/npm-98329-1c5e3b51/unpack-d7f95a757c12
+75 verbose gentlyRm vacuuming /var/folders/z2/wyj97zb15n1dtsymsjwgpnym0000gn/T/npm-98329-1c5e3b51/unpack-d7f95a757c12
+76 silly gunzTarPerm modes [ '755', '644' ]
+77 silly gunzTarPerm extractEntry
+78 silly gunzTarPerm modified mode [ '', 509, 493 ]
+79 silly gunzTarPerm extractEntry CHANGELOG.md
+80 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+81 silly gunzTarPerm extractEntry CREDITS.md
+82 silly gunzTarPerm modified mode [ 'CREDITS.md', 436, 420 ]
+83 silly gunzTarPerm extractEntry LICENSE.md
+84 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 420 ]
+85 silly gunzTarPerm extractEntry README.md
+86 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+87 silly gunzTarPerm extractEntry excanvas/
+88 silly gunzTarPerm modified mode [ 'excanvas/', 509, 493 ]
+89 silly gunzTarPerm extractEntry excanvas/README
+90 silly gunzTarPerm modified mode [ 'excanvas/README', 436, 420 ]
+91 silly gunzTarPerm extractEntry excanvas/excanvas.compiled.js
+92 silly gunzTarPerm modified mode [ 'excanvas/excanvas.compiled.js', 436, 420 ]
+93 silly gunzTarPerm extractEntry excanvas/excanvas.js
+94 silly gunzTarPerm modified mode [ 'excanvas/excanvas.js', 436, 420 ]
+95 silly gunzTarPerm extractEntry mootools/
+96 silly gunzTarPerm modified mode [ 'mootools/', 509, 493 ]
+97 silly gunzTarPerm extractEntry mootools/mootools-core-1.3.2.js
+98 silly gunzTarPerm modified mode [ 'mootools/mootools-core-1.3.2.js', 436, 420 ]
+99 silly gunzTarPerm extractEntry mootools/mootools-more-1.3.2.1.js
+100 silly gunzTarPerm modified mode [ 'mootools/mootools-more-1.3.2.1.js', 436, 420 ]
+101 silly gunzTarPerm extractEntry package.json
+102 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+103 silly gunzTarPerm extractEntry rhill-voronoi-core.js
+104 silly gunzTarPerm modified mode [ 'rhill-voronoi-core.js', 436, 420 ]
+105 silly gunzTarPerm extractEntry rhill-voronoi-core.min.js
+106 silly gunzTarPerm modified mode [ 'rhill-voronoi-core.min.js', 436, 420 ]
+107 silly gunzTarPerm extractEntry rhill-voronoi-demo1.html
+108 silly gunzTarPerm modified mode [ 'rhill-voronoi-demo1.html', 436, 420 ]
+109 silly gunzTarPerm extractEntry rhill-voronoi-demo2.html
+110 silly gunzTarPerm modified mode [ 'rhill-voronoi-demo2.html', 436, 420 ]
+111 silly gunzTarPerm extractEntry rhill-voronoi-demo3.php
+112 silly gunzTarPerm modified mode [ 'rhill-voronoi-demo3.php', 436, 420 ]
+113 silly gunzTarPerm extractEntry rhill-voronoi-demo4.html
+114 silly gunzTarPerm modified mode [ 'rhill-voronoi-demo4.html', 436, 420 ]
+115 silly gunzTarPerm extractEntry rhill-voronoi-demo5.html
+116 silly gunzTarPerm modified mode [ 'rhill-voronoi-demo5.html', 436, 420 ]
+117 silly gunzTarPerm extractEntry rhill-voronoi.html
+118 silly gunzTarPerm modified mode [ 'rhill-voronoi.html', 436, 420 ]
+119 silly cache afterAdd voronoi@1.0.0
+120 verbose afterAdd /Users/dave/.npm/voronoi/1.0.0/package/package.json not in flight; writing
+121 verbose afterAdd /Users/dave/.npm/voronoi/1.0.0/package/package.json written
+122 http 200 https://registry.npmjs.org/react
+123 silly registry.get cb [ 200,
+123 silly registry.get   { date: 'Mon, 09 Mar 2015 13:21:37 GMT',
+123 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+123 silly registry.get     etag: '"BADGWMCLZHY93ZH6QTTQQAS5O"',
+123 silly registry.get     'content-type': 'application/json',
+123 silly registry.get     'cache-control': 'max-age=60',
+123 silly registry.get     'content-length': '53496',
+123 silly registry.get     'accept-ranges': 'bytes',
+123 silly registry.get     via: '1.1 varnish',
+123 silly registry.get     age: '0',
+123 silly registry.get     'x-served-by': 'cache-lax1425-LAX',
+123 silly registry.get     'x-cache': 'HIT',
+123 silly registry.get     'x-cache-hits': '1',
+123 silly registry.get     'x-timer': 'S1425907297.338521,VS0,VE182',
+123 silly registry.get     vary: 'Accept',
+123 silly registry.get     'keep-alive': 'timeout=10, max=50',
+123 silly registry.get     connection: 'Keep-Alive' } ]
+124 silly addNameRange number 2 { name: 'react', range: '>=0.13.0-rc2 <0.14.0', hasData: true }
+125 silly addNameRange versions [ 'react',
+125 silly addNameRange   [ '0.0.1',
+125 silly addNameRange     '0.0.2',
+125 silly addNameRange     '0.0.3',
+125 silly addNameRange     '0.1.2',
+125 silly addNameRange     '0.2.0',
+125 silly addNameRange     '0.2.1',
+125 silly addNameRange     '0.2.2',
+125 silly addNameRange     '0.2.3',
+125 silly addNameRange     '0.2.4',
+125 silly addNameRange     '0.2.5',
+125 silly addNameRange     '0.2.6',
+125 silly addNameRange     '0.3.0',
+125 silly addNameRange     '0.3.4',
+125 silly addNameRange     '0.3.5',
+125 silly addNameRange     '0.5.0',
+125 silly addNameRange     '0.5.1',
+125 silly addNameRange     '0.5.2',
+125 silly addNameRange     '0.6.0',
+125 silly addNameRange     '0.6.1',
+125 silly addNameRange     '0.6.2',
+125 silly addNameRange     '0.6.3',
+125 silly addNameRange     '0.7.0',
+125 silly addNameRange     '0.7.1',
+125 silly addNameRange     '0.8.0',
+125 silly addNameRange     '0.9.0-rc1',
+125 silly addNameRange     '0.9.0',
+125 silly addNameRange     '0.10.0-rc1',
+125 silly addNameRange     '0.10.0',
+125 silly addNameRange     '0.11.0-rc1',
+125 silly addNameRange     '0.11.0',
+125 silly addNameRange     '0.11.1',
+125 silly addNameRange     '0.11.2',
+125 silly addNameRange     '0.12.0-rc1',
+125 silly addNameRange     '0.12.0',
+125 silly addNameRange     '0.12.1',
+125 silly addNameRange     '0.12.2',
+125 silly addNameRange     '0.13.0-alpha.1',
+125 silly addNameRange     '0.13.0-alpha.2',
+125 silly addNameRange     '0.13.0-beta.1',
+125 silly addNameRange     '0.13.0-beta.2',
+125 silly addNameRange     '0.13.0-rc1',
+125 silly addNameRange     '0.13.0-rc2' ] ]
+126 verbose addNamed react@0.13.0-rc2
+127 silly addNamed semver.valid 0.13.0-rc2
+128 silly addNamed semver.validRange 0.13.0-rc2
+129 verbose addRemoteTarball https://registry.npmjs.org/react/-/react-0.13.0-rc2.tgz not in flight; adding
+130 verbose addRemoteTarball [ 'https://registry.npmjs.org/react/-/react-0.13.0-rc2.tgz',
+130 verbose addRemoteTarball   '34e13467a0a198d44a5862bb7471177379129570' ]
+131 info retry fetch attempt 1 at 06:21:37
+132 info attempt registry request try #1 at 06:21:37
+133 http fetch GET https://registry.npmjs.org/react/-/react-0.13.0-rc2.tgz
+134 http fetch 200 https://registry.npmjs.org/react/-/react-0.13.0-rc2.tgz
+135 silly fetchAndShaCheck shasum 34e13467a0a198d44a5862bb7471177379129570
+136 verbose addTmpTarball /var/folders/z2/wyj97zb15n1dtsymsjwgpnym0000gn/T/npm-98329-1c5e3b51/registry.npmjs.org/react/-/react-0.13.0-rc2.tgz not in flight; adding
+137 verbose addTmpTarball already have metadata; skipping unpack for react@0.13.0-rc2
+138 silly cache afterAdd react@0.13.0-rc2
+139 verbose afterAdd /Users/dave/.npm/react/0.13.0-rc2/package/package.json not in flight; writing
+140 verbose afterAdd /Users/dave/.npm/react/0.13.0-rc2/package/package.json written
+141 http 304 https://registry.npmjs.org/react-art
+142 silly registry.get cb [ 304,
+142 silly registry.get   { date: 'Mon, 09 Mar 2015 13:21:41 GMT',
+142 silly registry.get     server: 'Apache',
+142 silly registry.get     via: '1.1 varnish',
+142 silly registry.get     'last-modified': 'Mon, 09 Mar 2015 13:21:41 GMT',
+142 silly registry.get     'cache-control': 'max-age=60',
+142 silly registry.get     etag: '"4IEEZGNV1QLWRBCO177U4K44E"',
+142 silly registry.get     age: '0',
+142 silly registry.get     'x-served-by': 'cache-lax1420-LAX',
+142 silly registry.get     'x-cache': 'MISS',
+142 silly registry.get     'x-cache-hits': '0',
+142 silly registry.get     'x-timer': 'S1425907301.090861,VS0,VE45',
+142 silly registry.get     vary: 'Accept',
+142 silly registry.get     'content-length': '0',
+142 silly registry.get     'keep-alive': 'timeout=10, max=50',
+142 silly registry.get     connection: 'Keep-Alive' } ]
+143 verbose etag https://registry.npmjs.org/react-art from cache
+144 silly addNameRange number 2 { name: 'react-art',
+144 silly addNameRange   range: '>=0.13.0-rc2 <0.14.0',
+144 silly addNameRange   hasData: true }
+145 silly addNameRange versions [ 'react-art',
+145 silly addNameRange   [ '0.0.1',
+145 silly addNameRange     '0.4.1',
+145 silly addNameRange     '0.4.2',
+145 silly addNameRange     '0.7.9',
+145 silly addNameRange     '0.9.0',
+145 silly addNameRange     '0.10.0',
+145 silly addNameRange     '0.10.2',
+145 silly addNameRange     '0.11.0',
+145 silly addNameRange     '0.12.1',
+145 silly addNameRange     '0.13.0-beta.1' ] ]
+146 verbose stack Error: No compatible version found: react-art@'>=0.13.0-rc2 <0.14.0'
+146 verbose stack Valid install targets:
+146 verbose stack ["0.0.1","0.4.1","0.4.2","0.7.9","0.9.0","0.10.0","0.10.2","0.11.0","0.12.1","0.13.0-beta.1"]
+146 verbose stack
+146 verbose stack     at installTargetsError (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:260:12)
+146 verbose stack     at next (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:239:17)
+146 verbose stack     at setData (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:216:5)
+146 verbose stack     at RES (/usr/local/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+146 verbose stack     at f (/usr/local/lib/node_modules/npm/node_modules/once/once.js:17:25)
+146 verbose stack     at saved (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:167:7)
+146 verbose stack     at Object.oncomplete (fs.js:107:15)
+147 verbose cwd /Users/dave/projects/browser/dc
+148 error Darwin 14.0.0
+149 error argv "node" "/usr/local/bin/npm" "install"
+150 error node v0.10.33
+151 error npm  v2.1.6
+152 error code ETARGET
+153 error notarget No compatible version found: react-art@'>=0.13.0-rc2 <0.14.0'
+153 error notarget Valid install targets:
+153 error notarget ["0.0.1","0.4.1","0.4.2","0.7.9","0.9.0","0.10.0","0.10.2","0.11.0","0.12.1","0.13.0-beta.1"]
+153 error notarget
+153 error notarget This is most likely not a problem with npm itself.
+153 error notarget In most cases you or one of your dependencies are requesting
+153 error notarget a package version that doesn't exist.
+154 verbose exit [ 1, true ]

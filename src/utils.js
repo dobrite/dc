@@ -1,6 +1,8 @@
 // http://www.sitepoint.com/javascript-generate-lighter-darker-color/
 
 var colorLuminance = function (hex, lum) {
+  // convert to decimal and change luminosity
+  var rgb = "#", c, i;
 
   // validate hex string
   hex = String(hex).replace(/[^0-9a-f]/gi, '');
@@ -10,9 +12,6 @@ var colorLuminance = function (hex, lum) {
   }
 
   lum = lum || 0;
-
-  // convert to decimal and change luminosity
-  var rgb = "#", c, i;
 
   for (i = 0; i < 3; i++) {
     c = parseInt(hex.substr(i*2,2), 16);
