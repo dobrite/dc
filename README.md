@@ -1,5 +1,7 @@
-nothing to see here
+some sort of mapgen
 ===================
+
+See [http://www-cs-students.stanford.edu/~amitp/game-programming/polygon-map-generation/](here)
 
 One terminal
 ------------
